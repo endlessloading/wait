@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+    <head>
+        <title>wait</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+        <style>
+        #needle{
+               position: fixed;
+               width: 100vw;
+               top: 20vh;
+               right: 45vw;
+               border-radius: 95% 80% 80% 25%;
+               opacity: 1;
+               cursor: wait;
+           }
+           #v2{
+               position: absolute;
+               width: 30vw;
+               top: 35vh;
+               right: 20vw;
+               border-radius: 85% 40% 89% 64%;
+               
+               opacity: 1;
+               /* transform: rotate(90deg); */
+               cursor: wait;
+           }
+           #v3{
+            position: absolute;
+               width: 10vw;
+               top: 20vh;
+               right: 45vw;
+               border-radius: 45% 10% 80% 45%;
+              
+               opacity: 1;
+               transform: rotate(-20deg);
+               cursor: wait; 
+           }
+           #v4{
+            position: absolute;
+               width: 20vw;
+               top: 50vh;
+               right: 60vw;
+               border-radius: 95% 80% 80% 45%;
+              
+               opacity: 1;
+               transform: rotate(30deg);
+               cursor: wait; 
+           }
+           #v5{
+            position: absolute;
+               width: 20vw;
+               top: 10vh;
+               right: 30vw;
+               border-radius: 95% 80% 80% 45%;
+               
+               opacity: 1;
+               transform: rotate(70deg);
+               cursor: wait; 
+           }
+           #v6{
+            position: absolute;
+               width: 10vw; 
+               top: 30vh;
+               right: 10vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(90deg);
+               cursor: wait;
+           }
+           #v7{
+            position: absolute;
+               width: 10vw;
+               top: 80vh;
+               right: 25vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(90deg);
+               cursor: wait;
+           }
+           #v8{
+            position: absolute;
+               width: 10vw;
+               top: 8vh;
+               right: 85vw;
+               border-radius: 55% 70% 38% 42%;
+               
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait;
+           }
+           #v9{
+            position: absolute;
+               width: 20vw;
+               top: 70vh;
+               right: 40vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait; 
+           }
+           #v10{
+            position: absolute;
+               width: 12vw;
+               top: 70vh;
+               right: 40vw;
+               border-radius: 75% 20% 78% 22%; 
+               
+               opacity: 1;
+               transform: rotate(-40deg);
+               cursor: wait; 
+           }
+           #v11{
+            position: absolute;
+               width: 10vw;
+               top: 70vh;
+               right: 80vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait; 
+           }
+            #v12{
+            position: absolute;
+               width: 10vw;
+               top: 40vh;
+               right: 90vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait;
+           }
+           #v13{
+            position: absolute;
+               width: 10vw;
+               top: 10vh;
+               right: 20vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait; 
+           }
+           #v14{
+            position: absolute;
+               width: 20vw;
+               top: 85vh;
+               right: 2vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait; 
+           }
+           #v15{
+            position: absolute;
+               width: 13vw;
+               top: 20vh;
+               right: 70vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(90deg);
+               cursor: wait;
+           }
+           #v16{
+            position: absolute;
+               width: 10vw;
+               top: 30vh;
+               right: 60vw;
+               /* border-radius: 15% 10% 8% 12%; */
+               
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait; 
+           }
+           #v17{
+            position: absolute;
+               width: 10vw;
+               top: 65vh;
+               right: 20vw;
+               border-radius: 45% 40% 28% 22%;
+               
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait;
+           }
+           #v18{
+            position: absolute;
+               width: 17vw;
+               top: 5vh;
+               right: 5vw;
+               border-radius: 30% 70% 50% 12%;
+               /* z-index: 20; */
+               opacity: 1;
+               transform: rotate(0deg);
+               cursor: wait;
+           } 
+           #ff{
+            position: absolute;
+            top: 35vh;
+            right:10vw;
+            width: 2vw;
+            cursor: help;
+            z-index: -20
+           }
+           #scan {
+            position: absolute;
+            top: -10vh;
+            right: -8vw;
+            width: 110vw;
+            z-index: -103;
+            
+        }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+            $( function() {
+              $( "#vv6" ).draggable();
+              
+            } );
+            </script>
+    </head>
+    <body>
+        <div id="videos">
+            <script>
+                var audio = new Audio("sound.wav ");
+audio.oncanplaythrough = function ( ) { }
+audio.onended = function ( ) { }
+            </script>
+            <video loop autoplay muted playsinline  id="needle" src="needle.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v2" src="2.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v3" src="3.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v4" src="4.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v5" src="5.mp4"
+            type="video/mp4"></video>
+            <div id="vv6" class="ui-widget-content">
+            <video loop autoplay muted playsinline  id="v6" src="6.mp4"
+            type="video/mp4"></video></div>
+            <video loop autoplay muted playsinline  id="v7" src="7.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v8" src="8.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v9" src="9.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v10" src="10.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v11" src="11.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v12" src="12.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v13" src="13.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v14" src="14.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v15" src="15.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v16" src="16.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v17" src="17.mp4"
+            type="video/mp4"></video>
+            <video loop autoplay muted playsinline  id="v18" src="18.mp4"
+            type="video/mp4"></video> 
+            <img id="scan" src="objects/Scan.jpeg">
+             
+            <a href=end.html><img id="ff" src="ff.png"></a>
+        </div>
+        <div class="container">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="button" id="button">
+        <button onclick="upload()"> speed up </button>
+    </div>
+        <script type="text/javascript">
+            var vid = document.getElementById("needle");
+             vid.playbackRate = 0.1;
+             var vid2 = document.getElementById("v2");
+             vid2.playbackRate = 0.1;
+             var vid3 = document.getElementById("v3");
+             vid3.playbackRate = 0.1;
+             var vid4 = document.getElementById("v4");
+             vid4.playbackRate = 0.1;
+             var vid5 = document.getElementById("v5");
+             vid5.playbackRate = 0.1;
+             var vid6 = document.getElementById("v6");
+             vid6.playbackRate = 0.1;
+             var vid7 = document.getElementById("v7");
+             vid7.playbackRate = 0.1;
+             var vid8 = document.getElementById("v8");
+             vid8.playbackRate = 0.1;
+             var vid = document.getElementById("v9");
+             vid.playbackRate = 0.1;
+             var vid = document.getElementById("v10");
+             vid.playbackRate = 0.1;
+             var vid = document.getElementById("v11");
+             vid.playbackRate = 0.1;
+            var vid = document.getElementById("v12");
+            vid.playbackRate = 0.1;
+            var vid = document.getElementById("v13");
+            vid.playbackRate = 0.1;
+            var vid = document.getElementById("v14");
+            vid.playbackRate = 0.1;
+            var vid = document.getElementById("v15");
+            vid.playbackRate = 0.1;
+            var vid = document.getElementById("v16");
+            vid.playbackRate = 0.1;
+            var vid = document.getElementById("v17");
+            vid.playbackRate = 0.1;
+            var vid = document.getElementById("v18");
+            vid.playbackRate = 0.1;
+
+            const upload = () => {
+                const progressBar = document.querySelector('.progress-bar')
+                progressBar.setAttribute('id', 'play-animation')
+             }
+
+             var vids = $("video"); 
+
+
+        </script>
+    </body>
+</html>

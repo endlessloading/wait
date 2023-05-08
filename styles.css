@@ -1,0 +1,32 @@
+.container{
+    height: 20px;
+    background-color: rgb(226, 226, 226);
+    position: relative;
+    border-color: black;
+    border-width: 2px;
+    /* width: 10%; */
+    /* z-index: -100; */
+    /* top: 10vh;
+    right: 70vw; */
+
+
+}
+
+.container .progress-bar{
+    position: absolute;
+    height: 100%;
+    background-color:blue;
+     width: 20vw
+    /* z-index: -99; */
+    /* top: 10vh;
+    right: 70vw; */
+    
+}
+
+#play-animation {
+    animation: progress-animation 5s forwards;
+}
+@keyframes progress-animation {
+    0% { width: 20%;}
+    100% {width: 100%}
+}

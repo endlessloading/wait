@@ -1,0 +1,679 @@
+<!doctype html>
+<html>
+    <head>
+        <title>esc</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+        <style>
+        #esc {
+            position: absolute;
+            top: 33vh;
+            right: 37vw;
+            width: 5vw;
+            z-index: -52;
+            cursor: pointer;
+        }
+        #ctrl {
+            position: absolute;
+            top: 2.3vh;
+            right: 0.5vw;
+            width: 4vw;
+            z-index: -2;
+            cursor: pointer;
+        }
+        #p1 {
+            position: absolute;
+            top: 2vh;
+            right: 67vw;
+            width: 14vw;
+            z-index: -30;
+            cursor: grab;
+        }
+        #p111 {
+            position: absolute;
+            top: 72vh;
+            right: 8vw;
+            width: 8vw;
+            z-index: -50;
+            cursor: grab;
+        }
+        #p1111 {
+            position: absolute;
+            top: 80vh;
+            right: 3vw;
+            width: 14vw;
+            transform: rotate(45deg);
+            z-index: -12;
+            opacity: 70%
+            cursor: grab;
+        }
+        #p2 {
+            position: absolute;
+            top: 40vh;
+            right: 27vw;
+            width: 12vw;
+            z-index: -29;
+            cursor: grab;
+        }
+        #p222 {
+            position: absolute;
+            top: 10vh;
+            right: 2vw;
+            width: 12vw;
+            z-index: -10;
+            transform: rotate(-20deg);
+            cursor: grab;
+        }
+        #p3 {
+            position: absolute;
+            top: 70vh;
+            right: 17vw;
+            width: 17vw;
+            z-index: -28;
+            cursor: grab;
+        }
+        #p333 {
+            position: absolute;
+            top: 15vh;
+            right: 2vw;
+            width: 18vw;
+            z-index: -12;
+            transform: rotate(-70deg);
+            cursor: grab;
+        }
+        #p4 {
+            position: absolute;
+            top: 80vh;
+            right: 27vw;
+            width: 24vw;
+            z-index: -27;
+            cursor: grab;
+        }
+        #p444 {
+            position: absolute;
+            top: 75vh;
+            right: 40vw;
+            width: 28vw;
+            z-index: -12;
+            transform: rotate(-30deg);
+            cursor: grab;
+        }
+        #p5 {
+            position: absolute;
+            top: 46vh;
+            right: 71vw;
+            width: 21vw;
+            z-index: -26;
+            cursor: grab;
+        }
+        #p555 {
+            position: absolute;
+            top: 16vh;
+            right: 50vw;
+            width: 18vw;
+            z-index: -8;
+            transform: rotate(-70deg);
+            opacity: 80%;
+            cursor: grab;
+        }
+        #p6 {
+            position: absolute;
+            top: 40vh;
+            right: 27vw;
+            width: 34vw;
+            z-index: -25;
+            cursor: grab;
+        }
+        #p666 {
+            position: absolute;
+            top: 90vh;
+            right: 67vw;
+            width: 34vw;
+            z-index: -5;
+            cursor: grab;
+        }
+        #p7 {
+            position: absolute;
+            top: 38vh;
+            right: 57vw;
+            width: 14vw;
+            z-index: -24;
+            cursor: grab;
+        }
+        #p777 {
+            position: absolute;
+            top: 3vh;
+            right: 87vw;
+            width: 8vw;
+            z-index: -3;
+            transform: rotate(27deg);
+            cursor: grab;
+        }
+        #p8 {
+            position: absolute;
+            top: 6vh;
+            right: 47vw;
+            width: 14vw;
+            z-index: -22;
+            cursor: grab;
+        }
+        #p888 {
+            position: absolute;
+            top: 46vh;
+            right: 67vw;
+            width: 27vw;
+            transform: rotate(40deg);
+            z-index: -8;
+            cursor: grab;
+        }
+        #p9 {
+            position: absolute;
+            top: 4vh;
+            right: 37vw;
+            width: 14vw;
+            z-index: -21;
+            cursor: grab;
+        }
+        #p999 {
+            position: absolute;
+            top: 44vh;
+            right: 77vw;
+            width: 17vw;
+            z-index: -5;
+            transform: rotate(10deg);
+            cursor: grab;
+        }
+        #p10 {
+            position: absolute;
+            top: 9vh;
+            right: 25vw;
+            width: 14vw;
+            z-index: -20;
+            cursor: grab;
+        }
+        #p1010 {
+            position: absolute;
+            top: 80vh;
+            right: 55vw;
+            width: 24vw;
+            transform: rotate(170deg);
+            z-index: -9;
+            cursor: grab;
+        }
+        #p11 {
+            position: absolute;
+            top: 2vh;
+            right: 37vw;
+            width: 14vw;
+            z-index: -19;
+            cursor: grab;
+        }
+        #p11111 {
+            position: absolute;
+            top: 2vh;
+            right: 37vw;
+            width: 14vw;
+            z-index: -19;
+            cursor: grab;
+        }
+        #p12 {
+            position: absolute;
+            top: 4vh;
+            right: 29vw;
+            width: 23vw;
+            z-index: -18;
+            cursor: grab;
+        }
+        #p1212 {
+            position: absolute;
+            top: 64vh;
+            right: -2vw;
+            width: 23vw;
+            z-index: -8;
+            transform: rotate(50deg);
+            cursor: grab;
+        }
+        #p01 {
+            position: absolute;
+            top: 40vh;
+            right: 3vw;
+            width: 21vw;
+            z-index: -17;
+            cursor: grab;
+        }
+        #p0101 {
+            position: absolute;
+            top: 60vh;
+            right: 1vw;
+            width: 21vw;
+            z-index: -3;
+            transform: rotate(-80deg);
+            cursor: grab;
+        }
+        #p02 {
+            position: absolute;
+            top: 30vh;
+            right: 10vw;
+            width: 35vw;
+            z-index: -16;
+            cursor: grab;
+        }
+        #p0202 {
+            position: absolute;
+            top: 50vh;
+            right: 60vw;
+            width: 23vw;
+            z-index: -6;
+            transform: rotate(-40deg);
+            cursor: grab;
+        }
+        #p03 {
+            position: absolute;
+            top: 10vh;
+            right: 8vw;
+            width: 25vw;
+            z-index: -15;
+            cursor: grab;
+        }
+        #p0303 {
+            position: absolute;
+            top: 1vh;
+            right: 78vw;
+            width: 15vw;
+            z-index: -5;
+            cursor: grab;
+        }
+        #p04 {
+            position: absolute;
+            top: 18vh;
+            right: 70vw;
+            width: 19vw;
+            z-index: -14;
+            cursor: grab;
+        }
+        #p0404 {
+            position: absolute;
+            top: 68vh;
+            right: 55vw;
+            width: 19vw;
+            z-index: -4;
+            cursor: grab;
+        }
+        #p05 {
+            position: absolute;
+            top: 29vh;
+            right: 56vw;
+            width: 28vw;
+            z-index: -13;
+            cursor: grab;
+        }
+        #p0505 {
+            position: absolute;
+            top:-2vh;
+            right: 10vw;
+            width: 18vw;
+            z-index: -9;
+            transform: rotate(167deg);
+            cursor: grab;
+        }
+        #p06 {
+            position: absolute;
+            top: 23vh;
+            right: 36vw;
+            width: 20vw;
+            z-index: -12;
+            cursor: grab;
+        }
+        #p0606 {
+            position: absolute;
+            top: 33vh;
+            right: 46vw;
+            width: 20vw;
+            z-index: -12;
+            transform: rotate(57deg);
+            cursor: grab;
+        }
+        #p07 {
+            position: absolute;
+            top: 16vh;
+            right: 48vw;
+            width: 34vw;
+            z-index: -11;
+            cursor: grab;
+        }
+        #p0707 {
+            position: absolute;
+            top: 36vh;
+            right: 54vw;
+            width: 14vw;
+            z-index: -11;
+            transform: rotate(67deg);
+            cursor: grab;
+        }
+        #p08 {
+            position: absolute;
+            top: 47vh;
+            right: 29vw;
+            width: 24vw;
+            z-index: -10;
+            cursor: grab;
+        }
+        #p0808 {
+            position: absolute;
+            top: 6vh;
+            right: 28vw;
+            width: 12vw;
+            z-index: -14;
+            transform: rotate(137deg);
+            cursor: grab;
+        }
+        #p09 {
+            position: absolute;
+            top: 56vh;
+            right: 67vw;
+            width: 34vw;
+            z-index: -9;
+            cursor: grab;
+        }
+        #p0909 {
+            position: absolute;
+            top: 26vh;
+            right: 87vw;
+            width: 22vw;
+            z-index: -5;
+            transform: rotate(167deg);
+            cursor: grab;
+        }
+        #p010 {
+            position: absolute;
+            top: 10vh;
+            right: 26vw;
+            width: 24vw;
+            z-index: -8;
+            cursor: grab;
+        }
+        #p010010 {
+            position: absolute;
+            top: 40vh;
+            right: 16vw;
+            width: 22vw;
+            z-index: -5;
+            transform: rotate(117deg);
+            cursor: grab;
+        }
+        #pa {
+            position: absolute;
+            top: 2vh;
+            right: 83vw;
+            width: 24vw;
+            z-index: -7;
+            cursor: grab;
+        }
+        #paa {
+            position: absolute;
+            top: 32vh;
+            right: 63vw;
+            width: 8vw;
+            z-index: -2;
+            transform: rotate(77deg);
+            cursor: grab;
+        }
+        #pb {
+            position: absolute;
+            top: 48vh;
+            right: 13vw;
+            rotate: 20%;
+            width: 26vw;
+            z-index: -6;
+            cursor: grab;
+        }
+        #pc {
+            position: absolute;
+            top: 35vh;
+            right: 1vw;
+            width: 21vw;
+            z-index: -5;
+            cursor: grab;
+        }
+        #pd {
+            position: absolute;
+            top: 38vh;
+            right: 36vw;
+            width: 17vw;
+            z-index: -4;
+            cursor: grab;
+        }
+        #pe {
+            position: absolute;
+            top: 40vh;
+            right: 45vw;
+            width: 19vw;
+            z-index: -3;
+            cursor: grab;
+        }
+        #pf {
+            position: absolute;
+            top: 50vh;
+            right: 33vw;
+            width: 15vw;
+            z-index: -32;
+            cursor: grab;
+        }
+        #hint {
+            position: fixed;
+            font-size: 19px;
+            bottom: 98vh;
+            left: 88vw;
+            color: white;
+            font: Georgia, serif;
+        }
+        #bar {
+            position: fixed;
+            z-index: -60;
+            top: 0.1vh;
+            left: 0.1vw;
+            width: 87vw; 
+            
+            
+        }
+        #scan {
+            position: absolute;
+            top: -10vh;
+            right: -8vw;
+            width: 110vw;
+            z-index: -103;
+            
+        }
+        #scan {
+            position: absolute;
+            top: -10vh;
+            right: -8vw;
+            width: 110vw;
+            z-index: -103;
+            
+        }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          $( "#d1" ).draggable();
+          $( "#d111" ).draggable();
+          $( "#d1111" ).draggable();
+          $( "#d2" ).draggable();
+          $( "#d222" ).draggable();
+          $( "#d3" ).draggable();
+          $( "#d333" ).draggable();
+          $( "#d4" ).draggable();
+          $( "#d444" ).draggable();
+          $( "#d5" ).draggable();
+          $( "#d555" ).draggable();
+          $( "#d6" ).draggable();
+          $( "#d666" ).draggable();
+          $( "#d7" ).draggable();
+          $( "#d777" ).draggable();
+          $( "#d8" ).draggable();
+          $( "#d888" ).draggable();
+          $( "#d9" ).draggable();
+          $( "#d999" ).draggable();
+          $( "#d10" ).draggable();
+          $( "#d1010" ).draggable();
+          $( "#d11" ).draggable();
+          $( "#d11111" ).draggable();
+          $( "#d12" ).draggable();
+          $( "#d1212" ).draggable();
+          $( "#d01" ).draggable();
+          $( "#d0101" ).draggable();
+          $( "#d02" ).draggable();
+          $( "#d0202" ).draggable();
+          $( "#d03" ).draggable();
+          $( "#d0303" ).draggable();
+          $( "#d04" ).draggable();
+          $( "#d0404" ).draggable();
+          $( "#d05" ).draggable();
+          $( "#d0505" ).draggable();
+          $( "#d06" ).draggable();
+          $( "#d0606" ).draggable();
+          $( "#d07" ).draggable();
+          $( "#d0707" ).draggable();
+          $( "#d08" ).draggable();
+          $( "#d0808" ).draggable();
+          $( "#d09" ).draggable();
+          $( "#d0909" ).draggable();
+          $( "#d010" ).draggable();
+          $( "#d010010" ).draggable();
+          $( "#da" ).draggable();
+          $( "#daa" ).draggable();
+          $( "#db" ).draggable();
+          $( "#dc" ).draggable();
+          $( "#dd" ).draggable();
+          $( "#de" ).draggable();
+          $( "#df" ).draggable();
+        } );
+        </script>
+        </head>
+
+        <body>
+            
+        <a href=wait.html><img id="esc" src="esc.png"></a>
+       
+        <img id="ctrl" src="ctrl.png" value="PLAY"  onclick="play()">
+        <audio id="audio" src="sound.wav" ></audio>
+        <div id="d1" class="ui-widget-content">
+        <img id="p1" draggable="true" src="objects/11.png"></div>
+        <div id="d111" class="ui-widget-content">
+            <img id="p111" draggable="true" src="objects/11.png"></div>
+            <div id="d1111" class="ui-widget-content">
+                <img id="p1111" draggable="true" src="objects/11.png"></div>
+        <div id="d2" class="ui-widget-content">
+        <img id="p2" draggable="true" src="objects/22.png"></div>
+        <div id="d222" class="ui-widget-content">
+            <img id="p222" draggable="true" src="objects/22.png"></div>
+        <div id="d3" class="ui-widget-content">
+        <img id="p3" draggable="true" src="objects/33.png"></div>
+        <div id="d333" class="ui-widget-content">
+            <img id="p333" draggable="true" src="objects/33.png"></div>
+        <div id="d4" class="ui-widget-content">
+        <img id="p4" draggable="true" src="objects/44.png"></div>
+        <div id="d444" class="ui-widget-content">
+            <img id="p444" draggable="true" src="objects/44.png"></div>
+        <div id="d5" class="ui-widget-content">
+        <img id="p5" draggable="true" src="objects/55.png"></div>
+        <div id="d555" class="ui-widget-content">
+            <img id="p555" draggable="true" src="objects/55.png"></div>
+        <div id="d6" class="ui-widget-content">
+        <img id="p6" draggable="true" src="objects/66.png"></div>
+        <div id="d666" class="ui-widget-content">
+            <img id="p666" draggable="true" src="objects/66.png"></div>
+        <div id="d7" class="ui-widget-content">
+        <img id="p7" draggable="true" src="objects/77.png"></div>
+        <div id="d777" class="ui-widget-content">
+            <img id="p777" draggable="true" src="objects/77.png"></div>
+        <div id="d8" class="ui-widget-content">
+        <img id="p8" draggable="true" src="objects/88.png"></div>
+        <div id="d888" class="ui-widget-content">
+            <img id="p888" draggable="true" src="objects/88.png"></div>
+        <div id="d9" class="ui-widget-content">
+        <img id="p9" draggable="true" src="objects/99.png"></div>
+        <div id="d999" class="ui-widget-content">
+            <img id="p999" draggable="true" src="objects/99.png"></div>
+        <div id="d10" class="ui-widget-content">
+        <img id="p10" draggable="true" src="objects/10.png"></div>
+        <div id="d1010" class="ui-widget-content">
+            <img id="p1010" draggable="true" src="objects/10.png"></div>
+        <div id="d11" class="ui-widget-content">
+        <img id="p11" draggable="true" src="objects/111.png"></div>
+        <div id="d11111" class="ui-widget-content">
+            <img id="p11111" draggable="true" src="objects/111.png"></div>
+        <div id="d12" class="ui-widget-content">
+        <img id="p12" draggable="true" src="objects/222.png"></div>
+        <div id="d1212" class="ui-widget-content">
+            <img id="p1212" draggable="true" src="objects/222.png"></div>
+        <div id="d01" class="ui-widget-content">
+        <img id="p01" draggable="true" src="objects/01.png"></div>
+        <div id="d0101" class="ui-widget-content">
+            <img id="p0101" draggable="true" src="objects/01.png"></div>
+        <div id="d02" class="ui-widget-content">
+            <img id="p02" draggable="true" src="objects/02.png"></div>
+            <div id="d0202" class="ui-widget-content">
+                <img id="p0202" draggable="true" src="objects/02.png"></div>
+            <div id="d03" class="ui-widget-content">
+                <img id="p03" draggable="true" src="objects/03.png"></div>
+                <div id="d0303" class="ui-widget-content">
+                    <img id="p0303" draggable="true" src="objects/03.png"></div>
+                <div id="d04" class="ui-widget-content">
+                    <img id="p04" draggable="true" src="objects/04.png"></div>
+                    <div id="d0404" class="ui-widget-content">
+                        <img id="p0404" draggable="true" src="objects/04.png"></div>
+                    <div id="d05" class="ui-widget-content">
+                        <img id="p05" draggable="true" src="objects/05.png"></div>
+                        <div id="d0505" class="ui-widget-content">
+                            <img id="p0505" draggable="true" src="objects/05.png"></div>
+                        <div id="d06" class="ui-widget-content">
+                            <img id="p06" draggable="true" src="objects/06.png"></div>
+                            <div id="d0606" class="ui-widget-content">
+                                <img id="p0606" draggable="true" src="objects/06.png"></div>
+                            <div id="d07" class="ui-widget-content">
+                                <img id="p07" draggable="true" src="objects/07.png"></div>
+                                <div id="d0707" class="ui-widget-content">
+                                    <img id="p0707" draggable="true" src="objects/07.png"></div>
+                                <div id="d08" class="ui-widget-content">
+                                    <img id="p08" draggable="true" src="objects/08.png"></div>
+                                    <div id="d0808" class="ui-widget-content">
+                                        <img id="p0808" draggable="true" src="objects/08.png"></div>
+                                    <div id="d09" class="ui-widget-content">
+                                        <img id="p09" draggable="true" src="objects/09.png"></div>
+                                        <div id="d0909" class="ui-widget-content">
+                                            <img id="p0909" draggable="true" src="objects/09.png"></div>
+                                        <div id="d010" class="ui-widget-content">
+                                            <img id="p010" draggable="true" src="objects/010.png"></div>
+                                            <div id="d010010" class="ui-widget-content">
+                                                <img id="p010010" draggable="true" src="objects/010.png"></div>
+                                            <div id="da" class="ui-widget-content">
+                                                <img id="pa" draggable="true" src="objects/a.png"></div>
+                                                <div id="daa" class="ui-widget-content">
+                                                    <img id="paa" draggable="true" src="objects/a.png"></div>
+                                                <div id="db" class="ui-widget-content">
+                                                    <img id="pb" draggable="true" src="objects/b.png"></div>
+                                                    <div id="dc" class="ui-widget-content">
+                                                        <img id="pc" draggable="true" src="objects/c.png"></div>
+                                                        <div id="dd" class="ui-widget-content">
+                                                            <img id="pd" draggable="true" src="objects/d.png"></div>
+                                                            <div id="de" class="ui-widget-content">
+                                                                <img id="pe" draggable="true" src="objects/e.png"></div>
+                                                                <div id="df" class="ui-widget-content">
+                                                                    <img id="pf" draggable="true" src="objects/f.png"></div>
+                                                                    <img id="scan" src="objects/Scan.jpeg">
+                                                                   <div id="hint">drag to find your way out</div> 
+        <video autoplay muted playsinline  id="bar" src="bar.mp4" type="video/mp4"></video> 
+        <script>
+           function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
+        </script>
+    </body>
+</html>
